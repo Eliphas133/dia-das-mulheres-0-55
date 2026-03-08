@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Feliz Dia das Mulheres</title>
+
+<style>
+
+body{
+margin:0;
+font-family: 'Segoe UI', sans-serif;
+background: linear-gradient(135deg,#ff4d8d,#ff9ab7);
+color:white;
+text-align:center;
+overflow-x:hidden;
+}
+
+header{
+padding:80px 20px;
+}
+
+h1{
+font-size:50px;
+margin-bottom:10px;
+}
+
+.sub{
+font-size:20px;
+opacity:0.9;
+}
+
+.container{
+max-width:900px;
+margin:auto;
+padding:40px 20px;
+}
+
+.card{
+background:white;
+color:#333;
+padding:40px;
+border-radius:20px;
+box-shadow:0 15px 40px rgba(0,0,0,0.2);
+margin-top:30px;
+}
+
+button{
+background:#ff2f7d;
+border:none;
+padding:15px 35px;
+color:white;
+font-size:18px;
+border-radius:30px;
+cursor:pointer;
+transition:0.3s;
+}
+
+button:hover{
+transform:scale(1.05);
+background:#e6005c;
+}
+
+.mensagem{
+margin-top:30px;
+font-size:20px;
+display:none;
+}
+
+footer{
+margin-top:80px;
+padding:20px;
+font-size:14px;
+opacity:0.8;
+}
+
+.heart{
+position:fixed;
+top:-10px;
+font-size:20px;
+animation:fall linear forwards;
+}
+
+@keyframes fall{
+to{
+transform:translateY(110vh);
+}
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1> Feliz Dia das Mulheres!
+    As duas pessoas que eu mais amo.
+     </h1>
+<p class="sub">🩷 uma pequena demostraçao do meu amor🩷 </p>
+
+</header>
+
+<div class="container">
+
+<div class="card">
+
+<h2>Para minha boca de tilapia e minha  💖</h2>
+
+<p>
+Hoje eu só quero agradecer por tudo que vocês representam na minha vida.
+Vocês são mulheres incríveis, fortes, inspiradoras e muito especiais para mim.
+</p>
+
+<button onclick="surpresa()">Clique para ver minha mensagem</button>
+
+<p class="mensagem" id="msg">
+Vocês são meu orgulho e minha inspiração todos os dias.
+Obrigado por tudo. Amo vocês! ❤️
+</p>
+
+</div>
+
+</div>
+
+<footer>
+Feito com carinho por Eliphas
+</footer>
+
+<script>
+
+function surpresa(){
+
+document.getElementById("msg").style.display="block";
+
+for(let i=0;i<30;i++){
+
+let heart=document.createElement("div");
+heart.className="heart";
+heart.innerHTML="💖";
+
+heart.style.left=Math.random()*100+"vw";
+heart.style.animationDuration=(Math.random()*3+2)+"s";
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},5000);
+
+}
+
+}
+
+</script>
+
+</body>
+</html>
